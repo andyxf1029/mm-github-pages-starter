@@ -103,7 +103,7 @@ The layout you'll likely use the most --- sidebar and main content combo.
 * Optional related posts module
 * Wide page variant
 
-{% include gallery id="single_layout_gallery" caption="Image header and meta info examples for `single` layout" %}
+
 
 Assign with `layout: single` , or better yet apply as a [Front Matter default]({{ "/docs/configuration/#front-matter-defaults" | relative_url }}) in `_config.yml`.
 
