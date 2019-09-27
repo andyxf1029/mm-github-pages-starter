@@ -24,7 +24,7 @@ feature_row:
   - image_path: /assets/images/jigsaw.png
     title: "Integration"
     excerpt: "Integration with ecosystem"
-    url: "/post/"
+    url: "/docs/layouts/"
  
    
 
