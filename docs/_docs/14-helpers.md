@@ -56,13 +56,7 @@ Generate a `<figure>` element with a single image and caption.
 
 Using the `figure` include like so:
 
-```liquid
-{% raw %}{% include figure image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}{% endraw %}
-```
 
-Will output the following:
-
-{% include figure image_path="/assets/images/unsplash-image-10.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
 
 ```html
 <figure>
@@ -102,20 +96,13 @@ gallery:
 
 And then drop-in the gallery include in the body where you'd like it to appear.
 
-| Include Parameter | Required | Description                                                                                                                                                       | Default                                                                      |
-| ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| **id**            | Optional | To add multiple galleries to a document uniquely name them in the YAML Front Matter and reference in `{% raw %}{% include gallery id="gallery_id" %}{% endraw %}` | `gallery`                                                                    |
-| **layout**        | Optional | Layout type. 2 column: `half`, 3 column: `third`, single column: `''` (blank)                                                                                     | Determined by gallery size. Two items: `half`, three or more items: `third`. |
-| **class**         | Optional | Use to add a `class` attribute to the surrounding `<figure>` element for additional styling needs.                                                                |                                                                              |
-| **caption**       | Optional | Gallery caption description. Markdown is allowed.                                                                                                                 |                                                                              |
+| Include Parameter | Required | Description                                                                                                                
 
-```liquid
-{% raw %}{% include gallery caption="This is a sample gallery with **Markdown support**." %}{% endraw %}
-```
+
 
 **Gallery example with caption:**
 
-{% include gallery caption="This is a sample gallery with **Markdown support**." %}
+
 
 **More Gallery Goodness:** A few more examples and [source code](https://github.com/{{ site.repository }}/blob/master/docs/\_posts/2010-09-09-post-gallery.md) can be seen in [this sample gallery post]({{ "" | relative_url }}{% post_url 2010-09-09-post-gallery %}).
 {: .notice--info}
@@ -157,16 +144,9 @@ feature_row:
 
 And then drop-in the feature row include in the body where you'd like it to appear.
 
-| Include Parameter | Required | Description                                                                                                                                                | Default       |
-| ----------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| **id**            | Optional | To add multiple rows to a document uniquely name them in the YAML Front Matter and reference in `{% raw %}{% include feature_row id="row2" %}{% endraw %}` | `feature_row` |
-| **type**          | Optional | Alignment of the featured blocks in the row. Options include: `left`, `center`, or `right` aligned.                                                        |               |
 
-```liquid
-{% raw %}{% include feature_row %}{% endraw %}
-```
 
-{% include feature_row %}
+
 
 **More Feature Row Goodness:** A [few more examples]({{ "/splash-page/" | relative_url }}) and [source code](https://github.com/{{ site.repository }}/blob/master/docs/\_pages/splash-page.md) can be seen in the demo site.
 {: .notice--info}
@@ -184,11 +164,7 @@ Embed a video from YouTube, Vimeo, or Google Drive that responsively sizes to fi
 
 To embed the following YouTube video at url `https://www.youtube.com/watch?v=XsxDH4HcOWA` (long version) or `https://youtu.be/XsxDH4HcOWA` (short version) into a post or page's main content you'd use:
 
-```liquid
-{% raw %}{% include video id="XsxDH4HcOWA" provider="youtube" %}{% endraw %}
-```
 
-{% include video id="XsxDH4HcOWA" provider="youtube" %}
 
 To embed it as a video header you'd use the following YAML Front Matter
 
@@ -206,11 +182,7 @@ header:
 
 To embed the following Vimeo video at url `https://vimeo.com/212731897` into a post or page's main content you'd use:
 
-```liquid
-{% raw %}{% include video id="212731897" provider="vimeo" %}{% endraw %}
-```
 
-{% include video id="212731897" provider="vimeo" %}
 
 To embed it as a video header you'd use the following YAML Front Matter
 
@@ -225,11 +197,7 @@ header:
 
 To embed the following Google Drive video at url `https://drive.google.com/file/d/1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO/preview` into a post or page's main content you'd use:
 
-```liquid
-{% raw %}{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}{% endraw %}
-```
 
-{% include video id="1u41lIbMLbV53PvMbyYc9HzvBug5lNWaO" provider="google-drive" %}
 
 To embed it as a video header you'd use the following YAML Front Matter
 
@@ -267,15 +235,8 @@ toc_icon: "cog"
 
 ```
 
-**Note:** using both methods will have unintended results. Be sure to remove `{% raw %}{% include toc %}{% endraw %}` placed table of contents from your content when using `toc: true`.
-{: .notice--warning }
 
-### Enabled via `toc` include (deprecated)
 
-To include a Kramdown [auto-generated table of contents](https://kramdown.gettalong.org/converter/html.html#toc) for posts and pages, add the following helper to your content.
-
-```liquid
-{% raw %}{% include toc %}{% endraw %}
 ```
 
 **Note:** this method only works with Markdown files.
@@ -291,9 +252,7 @@ To include a Kramdown [auto-generated table of contents](https://kramdown.gettal
 
 **TOC example with custom title and icon**
 
-```liquid
-{% raw %}{% include toc icon="cog" title="My Table of Contents" %}{% endraw %}
-```
+
 
 ## Navigation list
 
@@ -357,11 +316,7 @@ The theme's documentation is built with the `nav_list` helper so if you'd like a
 
 To add a navigation list to a post or page's main content instead of the sidebar use the include this way:
 
-```liquid
-{% raw %}{% include nav_list nav="foo" %}{% endraw %}
-```
 
-{% include nav_list nav="foo" %}
 
 | Parameter | Required     | Description                                              |
 | --------- | ------------ | -------------------------------------------------------- |
